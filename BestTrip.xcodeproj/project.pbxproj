@@ -99,13 +99,10 @@
 		66FCBDB32CFF27780080346E /* BestTrip */ = {
 			isa = PBXGroup;
 			children = (
-				66FCBDB42CFF27780080346E /* AppDelegate.swift */,
-				66FCBDB62CFF27780080346E /* SceneDelegate.swift */,
+				66FCBDE42CFF27F10080346E /* App */,
 				66FCBDB82CFF27780080346E /* ViewController.swift */,
 				66FCBDBA2CFF27780080346E /* Main.storyboard */,
-				66FCBDBD2CFF277A0080346E /* Assets.xcassets */,
 				66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */,
-				66FCBDC22CFF277A0080346E /* Info.plist */,
 			);
 			path = BestTrip;
 			sourceTree = "<group>";
@@ -125,6 +122,17 @@
 				66FCBDD72CFF277A0080346E /* BestTripUITestsLaunchTests.swift */,
 			);
 			path = BestTripUITests;
+			sourceTree = "<group>";
+		};
+		66FCBDE42CFF27F10080346E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				66FCBDB42CFF27780080346E /* AppDelegate.swift */,
+				66FCBDB62CFF27780080346E /* SceneDelegate.swift */,
+				66FCBDBD2CFF277A0080346E /* Assets.xcassets */,
+				66FCBDC22CFF277A0080346E /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,7 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestTrip/Info.plist;
+				INFOPLIST_FILE = BestTrip/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestTrip/Info.plist;
+				INFOPLIST_FILE = BestTrip/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
