@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB42CFF27780080346E /* AppDelegate.swift */; };
 		66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB62CFF27780080346E /* SceneDelegate.swift */; };
-		66FCBDB92CFF27780080346E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB82CFF27780080346E /* ViewController.swift */; };
+		66FCBDB92CFF27780080346E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB82CFF27780080346E /* HomeViewController.swift */; };
 		66FCBDBC2CFF27780080346E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBA2CFF27780080346E /* Main.storyboard */; };
 		66FCBDBE2CFF277A0080346E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBD2CFF277A0080346E /* Assets.xcassets */; };
 		66FCBDC12CFF277A0080346E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		66FCBDB12CFF27780080346E /* BestTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FCBDB42CFF27780080346E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66FCBDB62CFF27780080346E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66FCBDB82CFF27780080346E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66FCBDB82CFF27780080346E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		66FCBDBB2CFF27780080346E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66FCBDBD2CFF277A0080346E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66FCBDC02CFF277A0080346E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,9 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				66FCBDE42CFF27F10080346E /* App */,
-				66FCBDB82CFF27780080346E /* ViewController.swift */,
-				66FCBDBA2CFF27780080346E /* Main.storyboard */,
-				66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */,
+				66FCBDE72CFF360D0080346E /* Splash */,
+				66FCBDE62CFF36000080346E /* Login */,
+				66FCBDE52CFF35BE0080346E /* Home */,
+				66FCBDE82CFF36280080346E /* Flights */,
+				66FCBDE92CFF363F0080346E /* Check-in */,
+				66FCBDEA2CFF36510080346E /* Campaing */,
+				66FCBDEB2CFF36630080346E /* More */,
 			);
 			path = BestTrip;
 			sourceTree = "<group>";
@@ -133,6 +137,58 @@
 				66FCBDC22CFF277A0080346E /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		66FCBDE52CFF35BE0080346E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				66FCBDB82CFF27780080346E /* HomeViewController.swift */,
+				66FCBDBA2CFF27780080346E /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		66FCBDE62CFF36000080346E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		66FCBDE72CFF360D0080346E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		66FCBDE82CFF36280080346E /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		66FCBDE92CFF363F0080346E /* Check-in */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Check-in";
+			sourceTree = "<group>";
+		};
+		66FCBDEA2CFF36510080346E /* Campaing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Campaing;
+			sourceTree = "<group>";
+		};
+		66FCBDEB2CFF36630080346E /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FCBDB92CFF27780080346E /* ViewController.swift in Sources */,
+				66FCBDB92CFF27780080346E /* HomeViewController.swift in Sources */,
 				66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */,
 				66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */,
 			);

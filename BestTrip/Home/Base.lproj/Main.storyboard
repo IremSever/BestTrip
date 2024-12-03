@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Gcp-wE-PHr">
+            <objects>
+                <tabBarController id="PR4-eb-mXd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jqc-Ce-aZz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nz7-0m-qaA" kind="relationship" relationship="viewControllers" id="PdJ-uU-q7N"/>
+                        <segue destination="cPx-yy-0it" kind="relationship" relationship="viewControllers" id="kuq-GA-hV5"/>
+                        <segue destination="H6v-YO-7i8" kind="relationship" relationship="viewControllers" id="Xrg-F5-jMG"/>
+                        <segue destination="9mb-2x-l5H" kind="relationship" relationship="viewControllers" id="lMn-pd-wxt"/>
+                        <segue destination="K3a-Qr-vc9" kind="relationship" relationship="viewControllers" id="YP1-yq-gGV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="en5-yN-wTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-370"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="GmH-HP-Md9">
+            <objects>
+                <viewController id="nz7-0m-qaA" userLabel="Home" customClass="HomeViewController" customModule="BestTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DpE-zK-ePR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cmq-df-7nj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="uUF-7m-CQh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wys-r1-C3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2262" y="460"/>
+        </scene>
+        <!--Flights-->
+        <scene sceneID="Njs-VW-0v4">
+            <objects>
+                <viewController id="cPx-yy-0it" userLabel="Flights" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ct6-pY-bvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k4u-3D-fWY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Flights" image="airplane" catalog="system" id="uIm-6T-PhR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRq-3u-X5W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="460"/>
+        </scene>
+        <!--Check-in-->
+        <scene sceneID="K2y-k7-eZq">
+            <objects>
+                <viewController id="H6v-YO-7i8" userLabel="Check-in" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lbd-ig-Qx4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kMA-Jd-uq3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Campaing" image="location" catalog="system" id="ZVt-Ew-tgG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4e-mH-scD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="460"/>
+        </scene>
+        <!--Campaing-->
+        <scene sceneID="6hR-0z-c8Y">
+            <objects>
+                <viewController id="9mb-2x-l5H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rw-Hh-48m">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hxa-eH-jVo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Campaing" image="horn" catalog="system" id="rUm-m5-SlP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ae-ix-Gn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="460"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="1eb-HS-bis">
+            <objects>
+                <viewController id="K3a-Qr-vc9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oor-lC-SzP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1SI-T0-dDA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="ellipsis" catalog="system" id="LpX-Ia-h4V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEH-4X-9Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="460"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane" catalog="system" width="128" height="115"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="horn" catalog="system" width="128" height="99"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="location" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
