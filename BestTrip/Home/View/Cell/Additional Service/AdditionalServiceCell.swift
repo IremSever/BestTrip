@@ -27,4 +27,12 @@ class AdditionalServiceCell: UICollectionViewCell {
         
     }
     
+    func configure(with detailData: DetailData) {
+        viewBg.layer.cornerRadius = 10
+        viewBg.layer.masksToBounds = true
+        imgIcon.image = UIImage(named: detailData.image ?? "")
+        lblTitle.text = detailData.title
+        lblDetail.text = detailData.detail
+    }
+    
 }

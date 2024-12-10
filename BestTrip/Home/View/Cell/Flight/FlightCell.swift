@@ -4,7 +4,7 @@
 //
 //  Created by İrem Sever on 6.12.2024.
 //
-//segmentedcontrol capsule şeklinde güzüksün istiyorum kodu düzelt ayrıca koda viewBgSeparatöre - - - şeklinde görünsün istiyorum kodu düzelt.
+//fromAirpot ve toAirport, departureDate ve return date tıkladığımda DetailVC ekranı açılsın.
 import UIKit
 
 class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -28,42 +28,36 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    
-       private var dashedLineLayer: CAShapeLayer?
+    private var dashedLineLayer: CAShapeLayer?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
         loadData()
-        
         segmentedControl.selectedSegmentIndex = 0
         segmentValueChanged(segmentedControl)
-       
-        
     }
     override func layoutSubviews() {
-           super.layoutSubviews()
-           setupSegmentedControlStyle()
-       }
-       
+        super.layoutSubviews()
+        setupSegmentedControlStyle()
+    }
     
     func configure(with data: HomeData) {
         heightCollectionView.constant = 0
         
         let flightPath = UIBezierPath(roundedRect: viewBgFlight.bounds,
-                                          byRoundingCorners: [.topLeft, .topRight],
-                                          cornerRadii: CGSize(width: 20, height: 20))
-           let flightMask = CAShapeLayer()
-           flightMask.path = flightPath.cgPath
-           viewBgFlight.layer.mask = flightMask
-
-           let infoPath = UIBezierPath(roundedRect: viewBgInfo.bounds,
-                                        byRoundingCorners: [.bottomLeft, .bottomRight],
-                                        cornerRadii: CGSize(width: 20, height: 20))
-           let infoMask = CAShapeLayer()
-           infoMask.path = infoPath.cgPath
-           viewBgInfo.layer.mask = infoMask
+                                      byRoundingCorners: [.topLeft, .topRight],
+                                      cornerRadii: CGSize(width: 20, height: 20))
+        let flightMask = CAShapeLayer()
+        flightMask.path = flightPath.cgPath
+        viewBgFlight.layer.mask = flightMask
         
+        let infoPath = UIBezierPath(roundedRect: viewBgInfo.bounds,
+                                    byRoundingCorners: [.bottomLeft, .bottomRight],
+                                    cornerRadii: CGSize(width: 20, height: 20))
+        let infoMask = CAShapeLayer()
+        infoMask.path = infoPath.cgPath
+        viewBgInfo.layer.mask = infoMask
         
         lblCityFrom.text = data.departureCity
         lblFromAirport.text = data.departureAirportCode
@@ -71,18 +65,13 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         lblCityTo.text = data.arrivalCity
         lblToAirport.text = data.arrivalAirportCode
         
-        
         segmentedControl.layer.cornerRadius = 20
         segmentedControl.layer.masksToBounds = true
     }
-    
+}
+extension FlightCell {
     @IBAction func buttonChange(_ sender: Any) {
-        if let flightData = viewModel.homeModel?.app.first?.data.first {
-            lblCityFrom.text = flightData.arrivalCity
-            lblFromAirport.text = flightData.arrivalAirportCode
-            lblCityTo.text = flightData.departureCity
-            lblToAirport.text = flightData.departureAirportCode
-        }
+        print("change")
     }
     
     @IBAction func buttonCalendar(_ sender: Any) {
@@ -90,19 +79,10 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func buttonSearch(_ sender: Any) {
-        let departureCity = lblCityFrom.text ?? ""
-        let arrivalCity = lblCityTo.text ?? ""
-        let departureDate = lblDepartureDate.text ?? ""
-        
-        guard let allFlights = viewModel.homeModel?.app.flatMap({ $0.data }) else { return }
-        
-        let searchResults = allFlights.filter {
-            $0.departureCity == departureCity &&
-            $0.arrivalCity == arrivalCity &&
-            $0.departureTime?.contains(departureDate) == true
-        }
-    
+        print("search")
     }
+    
+    
 }
 
 extension FlightCell {
@@ -116,7 +96,7 @@ extension FlightCell {
     func registerCell(){
         collectionViewHistory.register(FlightHistoryCell.self, forCellWithReuseIdentifier: "FlightHistoryCell")
     }
-
+    
     func loadData() {
         viewModel.fetchData {
             DispatchQueue.main.async {
@@ -146,19 +126,28 @@ extension FlightCell {
             lblReturnDate.text = "12.12.24"
         case 1:
             lblTitleDepartureDate.text = ""
-            lblReturnDate.text = "One Way"
+            lblReturnDate.text = "One-way"
         default:
             break
         }
+        
     }
 }
 
 extension FlightCell {
-   
     private func setupSegmentedControlStyle() {
         segmentedControl.layer.cornerRadius = segmentedControl.bounds.height / 2
         segmentedControl.layer.masksToBounds = true
         segmentedControl.clipsToBounds = true
+        
+        for i in 0...subviews.count - 1{
+            if let subview = subviews[i] as? UIImageView{
+                if i == segmentedControl.selectedSegmentIndex {
+                    subview.backgroundColor = UIColor(red: 170.0/255.0, green: 170.0/255.0, blue: 170.0/255.0, alpha: 1.0)
+                }else{
+                    subview.backgroundColor = .clear
+                }
+            }
+        }
     }
-
 }

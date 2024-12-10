@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-2263.3587786259541" y="459.85915492957747"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="KDq-jv-43q">
             <objects>
-                <viewController id="miv-Iy-WXl" sceneMemberID="viewController">
+                <viewController id="miv-Iy-WXl" customClass="DetailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UcK-WD-Wpr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +111,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S94-Ea-6k2"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hIu-WY-oo0" id="UP2-Yb-b5m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JT8-fO-nUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

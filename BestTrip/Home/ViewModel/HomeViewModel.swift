@@ -22,7 +22,7 @@ class HomeViewModel {
             
             DispatchQueue.main.async {
                 self.homeModel = decodeData
-                print("json decode")
+//                print("json decode")
                 completion()
             }
         } catch {

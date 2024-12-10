@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = HomeViewModel()
@@ -65,26 +66,45 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         case .campaign:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
             guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else { return UICollectionViewCell() }
-         
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.2
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 5
+            cell.layer.masksToBounds = false
             cell.configure(with: data)
             return cell
         case .flights:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlightCell", for: indexPath) as! FlightCell
             guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else { return UICollectionViewCell() }
-            cell.applyShadow()
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.3
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 10
+            cell.layer.masksToBounds = false
+            cell.layer.cornerRadius = 20
             cell.configure(with: data)
             return cell
         case .additionalService:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdditionalServiceCell", for: indexPath) as! AdditionalServiceCell
             guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else { return UICollectionViewCell() }
             cell.configure(with: data)
-            cell.applyShadow()
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.2
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 10
+            cell.layer.masksToBounds = false
+            cell.layer.cornerRadius = 20
             return cell
         case .bestOppotunity:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
             guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else { return UICollectionViewCell() }
             cell.configure(with: data)
-            cell.applyShadow()
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.2
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            cell.layer.shadowRadius = 10
+            cell.layer.masksToBounds = false
+            cell.layer.cornerRadius = 20
             return cell
         }
     }
@@ -109,7 +129,7 @@ extension ViewController {
                 return createSection(
                     itemSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(373)),
                     groupSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(373)), orthogonalBehavior: .none,
-                    contentInsets: NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10 )
+                    contentInsets: NSDirectionalEdgeInsets(top: 0, leading: 11, bottom: 0, trailing: 11)
                 )
             case .additionalService:
                 return createSection(
@@ -117,13 +137,14 @@ extension ViewController {
                     groupSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(78)),
                     orthogonalBehavior: .none,
                     footerHeight: 0,
-                    contentInsets: NSDirectionalEdgeInsets(top: 19, leading: 16, bottom: 0, trailing: 16)
+                    contentInsets: NSDirectionalEdgeInsets(top: 19, leading: 16, bottom: -3, trailing: 16)
                 )
             case .bestOppotunity:
                 return createSection(
                     itemSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(180)),
                     groupSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(180)),
                     orthogonalBehavior: .none,
+                    headerHeight: 50,
                     contentInsets: NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16)
                 )
             case .none:
@@ -168,23 +189,3 @@ extension ViewController {
         return section
     }
 }
-
-extension UIView {
-    func applyShadow(
-        color: UIColor = .black,
-        opacity: Float = 0.1,
-        offset: CGSize = CGSize(width: 0, height: 2),
-        radius: CGFloat = 4,
-        cornerRadius: CGFloat = 8
-    ) {
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOpacity = opacity
-        self.layer.shadowOffset = offset
-        self.layer.shadowRadius = radius
-        self.layer.masksToBounds = false
-
-        // Köşe yumuşatma (opsiyonel)
-        self.layer.cornerRadius = cornerRadius
-    }
-}
-
