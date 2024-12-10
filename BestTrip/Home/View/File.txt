@@ -1,0 +1,30 @@
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let sectionType = viewModel.homeModel?.app[indexPath.section].type else {
+        fatalError("Section type bulunamadı")
+    }
+    
+    switch sectionType {
+    case .campaign:
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
+        let item = viewModel.homeModel?.app[indexPath.section].items[indexPath.item]
+        cell.configure(with: item) // Hücreyi doldur
+        return cell
+    case .flights:
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlightsCell", for: indexPath) as! FlightsCell
+        let item = viewModel.homeModel?.app[indexPath.section].items[indexPath.item]
+        cell.configure(with: item) // Hücreyi doldur
+        return cell
+    case .additionalService:
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdditionalServiceCell", for: indexPath) as! AdditionalServiceCell
+        let item = viewModel.homeModel?.app[indexPath.section].items[indexPath.item]
+        cell.configure(with: item) // Hücreyi doldur
+        return cell
+    case .bestOppotunity:
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestOpportunityCell", for: indexPath) as! BestOpportunityCell
+        let item = viewModel.homeModel?.app[indexPath.section].items[indexPath.item]
+        cell.configure(with: item) // Hücreyi doldur
+        return cell
+    default:
+        fatalError("Tanımsız bölüm tipi")
+    }
+}

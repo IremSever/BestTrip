@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613D444A2D069BA2002572D6 /* AdditionalServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D44482D069BA2002572D6 /* AdditionalServiceCell.swift */; };
+		613D444B2D069BA2002572D6 /* AdditionalServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613D44492D069BA2002572D6 /* AdditionalServiceCell.xib */; };
+		61BEF6AC2D019A4700F34287 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BEF6AB2D019A4700F34287 /* home.json */; };
+		61BEF6B12D01ECC800F34287 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B02D01ECC800F34287 /* HomeModel.swift */; };
+		61BEF6B32D01ED1D00F34287 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B22D01ED1D00F34287 /* HomeViewModel.swift */; };
+		61BEF6B72D02DAB000F34287 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B62D02DAB000F34287 /* FlightsViewController.swift */; };
+		61BEF6BB2D02DE8900F34287 /* CampaignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BEF6BA2D02DE8900F34287 /* CampaignCell.xib */; };
+		61BEF6BC2D02DE8900F34287 /* CampaignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B92D02DE8900F34287 /* CampaignCell.swift */; };
+		61BEF6C12D02E11100F34287 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6C02D02E11100F34287 /* Template.swift */; };
+		61BEF6C92D02F00E00F34287 /* FlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BEF6C82D02F00E00F34287 /* FlightCell.xib */; };
+		61BEF6CA2D02F00E00F34287 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6C72D02F00E00F34287 /* FlightCell.swift */; };
+		61BEF6CE2D0323A900F34287 /* FlightHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BEF6CD2D0323A900F34287 /* FlightHistoryCell.xib */; };
+		61BEF6CF2D0323A900F34287 /* FlightHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6CC2D0323A900F34287 /* FlightHistoryCell.swift */; };
 		66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB42CFF27780080346E /* AppDelegate.swift */; };
 		66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB62CFF27780080346E /* SceneDelegate.swift */; };
-		66FCBDB92CFF27780080346E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB82CFF27780080346E /* HomeViewController.swift */; };
+		66FCBDB92CFF27780080346E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB82CFF27780080346E /* ViewController.swift */; };
 		66FCBDBC2CFF27780080346E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBA2CFF27780080346E /* Main.storyboard */; };
 		66FCBDBE2CFF277A0080346E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBD2CFF277A0080346E /* Assets.xcassets */; };
 		66FCBDC12CFF277A0080346E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */; };
@@ -36,10 +49,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		613D44482D069BA2002572D6 /* AdditionalServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalServiceCell.swift; sourceTree = "<group>"; };
+		613D44492D069BA2002572D6 /* AdditionalServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalServiceCell.xib; sourceTree = "<group>"; };
+		61BEF6AB2D019A4700F34287 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
+		61BEF6B02D01ECC800F34287 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		61BEF6B22D01ED1D00F34287 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		61BEF6B62D02DAB000F34287 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlightsViewController.swift; path = BestTrip/Home/ViewModel/FlightsViewController.swift; sourceTree = SOURCE_ROOT; };
+		61BEF6B92D02DE8900F34287 /* CampaignCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCell.swift; sourceTree = "<group>"; };
+		61BEF6BA2D02DE8900F34287 /* CampaignCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampaignCell.xib; sourceTree = "<group>"; };
+		61BEF6C02D02E11100F34287 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		61BEF6C72D02F00E00F34287 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		61BEF6C82D02F00E00F34287 /* FlightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightCell.xib; sourceTree = "<group>"; };
+		61BEF6CC2D0323A900F34287 /* FlightHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightHistoryCell.swift; sourceTree = "<group>"; };
+		61BEF6CD2D0323A900F34287 /* FlightHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightHistoryCell.xib; sourceTree = "<group>"; };
 		66FCBDB12CFF27780080346E /* BestTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FCBDB42CFF27780080346E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66FCBDB62CFF27780080346E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66FCBDB82CFF27780080346E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		66FCBDB82CFF27780080346E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66FCBDBB2CFF27780080346E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66FCBDBD2CFF277A0080346E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66FCBDC02CFF277A0080346E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +102,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		613D44472D069AE8002572D6 /* Additional Service */ = {
+			isa = PBXGroup;
+			children = (
+				613D44482D069BA2002572D6 /* AdditionalServiceCell.swift */,
+				613D44492D069BA2002572D6 /* AdditionalServiceCell.xib */,
+			);
+			path = "Additional Service";
+			sourceTree = "<group>";
+		};
+		613D444C2D06E5F3002572D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		613D444D2D06E603002572D6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		61BEF6AA2D0199DE00F34287 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6AB2D019A4700F34287 /* home.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		61BEF6AD2D01EC9300F34287 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6B02D01ECC800F34287 /* HomeModel.swift */,
+				61BEF6C02D02E11100F34287 /* Template.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61BEF6AE2D01EC9A00F34287 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6B22D01ED1D00F34287 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61BEF6AF2D01ECA100F34287 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				613D444D2D06E603002572D6 /* Detail */,
+				613D444C2D06E5F3002572D6 /* Home */,
+				66FCBDB82CFF27780080346E /* ViewController.swift */,
+				66FCBDBA2CFF27780080346E /* Main.storyboard */,
+				61BEF6B82D02DE5A00F34287 /* Cell */,
+				61BEF6C22D02E25300F34287 /* Supplementary */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61BEF6B82D02DE5A00F34287 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6C32D02E26F00F34287 /* Campaign */,
+				61BEF6C42D02EF9F00F34287 /* Flight */,
+				613D44472D069AE8002572D6 /* Additional Service */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		61BEF6BD2D02E00C00F34287 /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6B62D02DAB000F34287 /* FlightsViewController.swift */,
+			);
+			path = Flight;
+			sourceTree = "<group>";
+		};
+		61BEF6BF2D02E03800F34287 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		61BEF6C22D02E25300F34287 /* Supplementary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supplementary;
+			sourceTree = "<group>";
+		};
+		61BEF6C32D02E26F00F34287 /* Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6B92D02DE8900F34287 /* CampaignCell.swift */,
+				61BEF6BA2D02DE8900F34287 /* CampaignCell.xib */,
+			);
+			path = Campaign;
+			sourceTree = "<group>";
+		};
+		61BEF6C42D02EF9F00F34287 /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6CB2D03237700F34287 /* FlightHistory */,
+				61BEF6C72D02F00E00F34287 /* FlightCell.swift */,
+				61BEF6C82D02F00E00F34287 /* FlightCell.xib */,
+			);
+			path = Flight;
+			sourceTree = "<group>";
+		};
+		61BEF6CB2D03237700F34287 /* FlightHistory */ = {
+			isa = PBXGroup;
+			children = (
+				61BEF6CC2D0323A900F34287 /* FlightHistoryCell.swift */,
+				61BEF6CD2D0323A900F34287 /* FlightHistoryCell.xib */,
+			);
+			path = FlightHistory;
+			sourceTree = "<group>";
+		};
 		66FCBDA82CFF27780080346E = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +248,9 @@
 			children = (
 				66FCBDE42CFF27F10080346E /* App */,
 				66FCBDE72CFF360D0080346E /* Splash */,
-				66FCBDE62CFF36000080346E /* Login */,
+				61BEF6BF2D02E03800F34287 /* Login */,
 				66FCBDE52CFF35BE0080346E /* Home */,
-				66FCBDE82CFF36280080346E /* Flights */,
-				66FCBDE92CFF363F0080346E /* Check-in */,
-				66FCBDEA2CFF36510080346E /* Campaing */,
-				66FCBDEB2CFF36630080346E /* More */,
+				61BEF6BD2D02E00C00F34287 /* Flight */,
 			);
 			path = BestTrip;
 			sourceTree = "<group>";
@@ -133,8 +277,8 @@
 			children = (
 				66FCBDB42CFF27780080346E /* AppDelegate.swift */,
 				66FCBDB62CFF27780080346E /* SceneDelegate.swift */,
-				66FCBDBD2CFF277A0080346E /* Assets.xcassets */,
 				66FCBDC22CFF277A0080346E /* Info.plist */,
+				66FCBDBD2CFF277A0080346E /* Assets.xcassets */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -142,17 +286,12 @@
 		66FCBDE52CFF35BE0080346E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				66FCBDB82CFF27780080346E /* HomeViewController.swift */,
-				66FCBDBA2CFF27780080346E /* Main.storyboard */,
+				61BEF6AA2D0199DE00F34287 /* JSON */,
+				61BEF6AD2D01EC9300F34287 /* Model */,
+				61BEF6AE2D01EC9A00F34287 /* ViewModel */,
+				61BEF6AF2D01ECA100F34287 /* View */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		66FCBDE62CFF36000080346E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		66FCBDE72CFF360D0080346E /* Splash */ = {
@@ -161,34 +300,6 @@
 				66FCBDBF2CFF277A0080346E /* LaunchScreen.storyboard */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		66FCBDE82CFF36280080346E /* Flights */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Flights;
-			sourceTree = "<group>";
-		};
-		66FCBDE92CFF363F0080346E /* Check-in */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Check-in";
-			sourceTree = "<group>";
-		};
-		66FCBDEA2CFF36510080346E /* Campaing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Campaing;
-			sourceTree = "<group>";
-		};
-		66FCBDEB2CFF36630080346E /* More */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +366,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					66FCBDB02CFF27780080346E = {
 						CreatedOnToolsVersion = 15.2;
@@ -296,8 +407,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				66FCBDC12CFF277A0080346E /* LaunchScreen.storyboard in Resources */,
+				61BEF6CE2D0323A900F34287 /* FlightHistoryCell.xib in Resources */,
 				66FCBDBE2CFF277A0080346E /* Assets.xcassets in Resources */,
+				61BEF6BB2D02DE8900F34287 /* CampaignCell.xib in Resources */,
+				613D444B2D069BA2002572D6 /* AdditionalServiceCell.xib in Resources */,
+				61BEF6AC2D019A4700F34287 /* home.json in Resources */,
 				66FCBDBC2CFF27780080346E /* Main.storyboard in Resources */,
+				61BEF6C92D02F00E00F34287 /* FlightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,8 +438,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FCBDB92CFF27780080346E /* HomeViewController.swift in Sources */,
+				61BEF6B72D02DAB000F34287 /* FlightsViewController.swift in Sources */,
+				61BEF6CA2D02F00E00F34287 /* FlightCell.swift in Sources */,
+				61BEF6BC2D02DE8900F34287 /* CampaignCell.swift in Sources */,
+				61BEF6B12D01ECC800F34287 /* HomeModel.swift in Sources */,
+				66FCBDB92CFF27780080346E /* ViewController.swift in Sources */,
 				66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */,
+				61BEF6C12D02E11100F34287 /* Template.swift in Sources */,
+				613D444A2D069BA2002572D6 /* AdditionalServiceCell.swift in Sources */,
+				61BEF6B32D01ED1D00F34287 /* HomeViewModel.swift in Sources */,
+				61BEF6CF2D0323A900F34287 /* FlightHistoryCell.swift in Sources */,
 				66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,7 +680,6 @@
 		66FCBDDF2CFF277A0080346E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -575,7 +698,6 @@
 		66FCBDE02CFF277A0080346E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -594,7 +716,6 @@
 		66FCBDE22CFF277A0080346E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -611,7 +732,6 @@
 		66FCBDE32CFF277A0080346E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.60392159219999997" green="0.60392159219999997" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <tabBarItemAppearance key="stackedLayoutAppearance">
+                                <tabBarItemStateAppearance key="normal"/>
+                                <tabBarItemStateAppearance key="selected"/>
+                                <tabBarItemStateAppearance key="disabled"/>
+                                <tabBarItemStateAppearance key="focused"/>
+                            </tabBarItemAppearance>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="nz7-0m-qaA" kind="relationship" relationship="viewControllers" id="PdJ-uU-q7N"/>
@@ -32,24 +42,84 @@
         <!--Home-->
         <scene sceneID="GmH-HP-Md9">
             <objects>
-                <viewController id="nz7-0m-qaA" userLabel="Home" customClass="HomeViewController" customModule="BestTrip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nz7-0m-qaA" userLabel="Home" customClass="ViewController" customModule="BestTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DpE-zK-ePR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-Yj-uDV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <color key="backgroundColor" red="0.95686274770000002" green="0.96470588450000005" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BrS-a2-Pjf">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cmq-df-7nj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hCa-Yj-uDV" firstAttribute="top" secondItem="DpE-zK-ePR" secondAttribute="top" id="E4L-Ho-lE5"/>
+                            <constraint firstItem="cmq-df-7nj" firstAttribute="bottom" secondItem="hCa-Yj-uDV" secondAttribute="bottom" id="VhS-XR-Y2e"/>
+                            <constraint firstItem="hCa-Yj-uDV" firstAttribute="leading" secondItem="DpE-zK-ePR" secondAttribute="leading" id="bqb-n7-jD6"/>
+                            <constraint firstAttribute="trailing" secondItem="hCa-Yj-uDV" secondAttribute="trailing" id="kKj-JU-Rp8"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="uUF-7m-CQh"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="uUF-7m-CQh">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hCa-Yj-uDV" id="tHJ-ai-Y4K"/>
+                        <segue destination="miv-Iy-WXl" kind="show" id="2Q2-Ff-V32"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wys-r1-C3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2262" y="460"/>
+            <point key="canvasLocation" x="-2263.3587786259541" y="459.85915492957747"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KDq-jv-43q">
+            <objects>
+                <viewController id="miv-Iy-WXl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UcK-WD-Wpr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hIu-WY-oo0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdW-KJ-dAu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Ae-4q-NqG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hIu-WY-oo0" firstAttribute="top" secondItem="8Ae-4q-NqG" secondAttribute="top" id="DkE-fm-tRc"/>
+                            <constraint firstItem="hIu-WY-oo0" firstAttribute="leading" secondItem="UcK-WD-Wpr" secondAttribute="leading" id="aS7-k4-NSw"/>
+                            <constraint firstItem="hIu-WY-oo0" firstAttribute="bottom" secondItem="8Ae-4q-NqG" secondAttribute="bottom" id="gt2-Mv-waT"/>
+                            <constraint firstItem="hIu-WY-oo0" firstAttribute="trailing" secondItem="UcK-WD-Wpr" secondAttribute="trailing" id="qFn-UW-Qrt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S94-Ea-6k2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT8-fO-nUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2263.3587786259541" y="1179.5774647887324"/>
         </scene>
         <!--Flights-->
         <scene sceneID="Njs-VW-0v4">
             <objects>
-                <viewController id="cPx-yy-0it" userLabel="Flights" sceneMemberID="viewController">
+                <viewController id="cPx-yy-0it" userLabel="Flights" customClass="FlightsViewController" customModule="BestTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ct6-pY-bvJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
