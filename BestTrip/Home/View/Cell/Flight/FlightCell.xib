@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,13 +40,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7U-qS-D0C">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="14.666666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="14.333333333333334"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fa-hv-1r0">
-                                                <rect key="frame" x="0.0" y="30.666666666666657" width="120" height="19.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333343" width="120" height="19.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                             <constraint firstItem="AsW-9P-mnF" firstAttribute="leading" secondItem="yF5-8I-BUV" secondAttribute="leading" id="ive-CL-hFs"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8g-Ty-rG5">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8g-Ty-rG5" userLabel="ViewSep">
                         <rect key="frame" x="0.0" y="167" width="373" height="20"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahx-Io-rwn">
@@ -302,7 +302,7 @@
                                         <rect key="frame" x="0.0" y="3" width="373" height="1"/>
                                     </imageView>
                                     <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-BQ-JBz">
-                                        <rect key="frame" x="-10" y="-5.6666666666666767" width="20" height="18.666666666666671"/>
+                                        <rect key="frame" x="-10" y="-5.3333333333333446" width="20" height="18.666666666666664"/>
                                         <color key="tintColor" red="0.90196079019999997" green="0.90980386729999996" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="gni-cM-zVW"/>
@@ -324,7 +324,7 @@
                                 </constraints>
                             </view>
                             <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Akc-Un-0ZN">
-                                <rect key="frame" x="362" y="0.66666666666666607" width="20" height="18.666666666666671"/>
+                                <rect key="frame" x="362" y="0.99999999999999822" width="20" height="18.666666666666664"/>
                                 <color key="tintColor" red="0.90196079019999997" green="0.90980386729999996" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.999999999999986" id="HRy-Jd-ivf"/>
@@ -334,7 +334,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="373" id="2Uh-2z-K0M"/>
                             <constraint firstAttribute="trailing" secondItem="Akc-Un-0ZN" secondAttribute="trailing" constant="-9" id="Cge-YJ-VXs"/>
                             <constraint firstItem="ahx-Io-rwn" firstAttribute="bottom" secondItem="H8g-Ty-rG5" secondAttribute="bottomMargin" id="U2s-6y-rdw"/>
                             <constraint firstItem="Akc-Un-0ZN" firstAttribute="centerY" secondItem="ahx-Io-rwn" secondAttribute="centerY" constant="0.49999999999999822" id="cMY-oO-x68"/>
@@ -356,6 +355,7 @@
                 <constraint firstItem="cFz-LY-Hgj" firstAttribute="top" secondItem="HRR-K2-F5j" secondAttribute="bottom" constant="8" id="HjV-ED-n9y"/>
                 <constraint firstItem="H8g-Ty-rG5" firstAttribute="leading" secondItem="HRR-K2-F5j" secondAttribute="leading" id="PlQ-xk-y93"/>
                 <constraint firstItem="cFz-LY-Hgj" firstAttribute="top" secondItem="HRR-K2-F5j" secondAttribute="bottom" constant="8" id="VW9-Yw-uBM"/>
+                <constraint firstAttribute="trailing" secondItem="H8g-Ty-rG5" secondAttribute="trailing" id="Y3y-Yu-gYk"/>
                 <constraint firstItem="8GD-EA-6ol" firstAttribute="top" secondItem="HRR-K2-F5j" secondAttribute="bottom" id="YIT-r0-zUf"/>
                 <constraint firstItem="8GD-EA-6ol" firstAttribute="leading" secondItem="pnV-Rj-K2I" secondAttribute="leading" id="Zo2-I5-MNb"/>
                 <constraint firstAttribute="trailing" secondItem="HRR-K2-F5j" secondAttribute="trailing" id="bSK-hm-E9U"/>
@@ -393,13 +393,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

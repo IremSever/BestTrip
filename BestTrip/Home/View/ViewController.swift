@@ -109,7 +109,7 @@ extension ViewController {
                 return createSection(
                     itemSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(373)),
                     groupSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(373)), orthogonalBehavior: .none,
-                    contentInsets: NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+                    contentInsets: NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10 )
                 )
             case .additionalService:
                 return createSection(
