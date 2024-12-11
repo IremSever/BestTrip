@@ -11,30 +11,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DateSelectionCell" customModule="BestTrip" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="383" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="383" height="600"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-3J-Qz8">
-                        <rect key="frame" x="0.0" y="0.0" width="383" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="600" id="MXn-Z0-O1x"/>
+                            <constraint firstAttribute="width" constant="393" id="RKL-Vp-8Gv"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="P9Y-3J-Qz8" secondAttribute="bottom" id="7R8-lU-jn7"/>
+                <constraint firstItem="P9Y-3J-Qz8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9gs-ba-NKp"/>
                 <constraint firstAttribute="trailing" secondItem="P9Y-3J-Qz8" secondAttribute="trailing" id="Az4-83-dTZ"/>
-                <constraint firstItem="P9Y-3J-Qz8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GBc-SZ-Q7k"/>
                 <constraint firstItem="P9Y-3J-Qz8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KQY-yq-7xu"/>
             </constraints>
             <size key="customSize" width="250" height="305"/>
             <connections>
                 <outlet property="viewCallendar" destination="P9Y-3J-Qz8" id="uHy-09-QbJ"/>
             </connections>
-            <point key="canvasLocation" x="102.29007633587786" y="77.112676056338032"/>
+            <point key="canvasLocation" x="101.5267175572519" y="76.760563380281695"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -26,6 +26,8 @@
 		66458B152D085E6200B56ECE /* DateSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66458B132D085E6200B56ECE /* DateSelectionCell.xib */; };
 		66458B1C2D087B8B00B56ECE /* CitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66458B1A2D087B8B00B56ECE /* CitySelection.swift */; };
 		66458B1D2D087B8B00B56ECE /* CitySelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66458B1B2D087B8B00B56ECE /* CitySelection.xib */; };
+		66458B212D097C2B00B56ECE /* PassengerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66458B1F2D097C2B00B56ECE /* PassengerCell.swift */; };
+		66458B222D097C2B00B56ECE /* PassengerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66458B202D097C2B00B56ECE /* PassengerCell.xib */; };
 		66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB42CFF27780080346E /* AppDelegate.swift */; };
 		66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB62CFF27780080346E /* SceneDelegate.swift */; };
 		66FCBDB92CFF27780080346E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBDB82CFF27780080346E /* ViewController.swift */; };
@@ -73,6 +75,8 @@
 		66458B132D085E6200B56ECE /* DateSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionCell.xib; sourceTree = "<group>"; };
 		66458B1A2D087B8B00B56ECE /* CitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelection.swift; sourceTree = "<group>"; };
 		66458B1B2D087B8B00B56ECE /* CitySelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitySelection.xib; sourceTree = "<group>"; };
+		66458B1F2D097C2B00B56ECE /* PassengerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerCell.swift; sourceTree = "<group>"; };
+		66458B202D097C2B00B56ECE /* PassengerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerCell.xib; sourceTree = "<group>"; };
 		66FCBDB12CFF27780080346E /* BestTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FCBDB42CFF27780080346E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66FCBDB62CFF27780080346E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,8 +227,8 @@
 		66458B0B2D08265100B56ECE /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				66458B112D085D4700B56ECE /* Cell */,
 				66458B0C2D08266800B56ECE /* DetailVC.swift */,
+				66458B112D085D4700B56ECE /* Cell */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -232,6 +236,7 @@
 		66458B112D085D4700B56ECE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				66458B1E2D097C0B00B56ECE /* Passenger */,
 				66458B172D086B1D00B56ECE /* City Selection */,
 				66458B162D085E6B00B56ECE /* Date Selection */,
 				66458B122D085E6200B56ECE /* DateSelectionCell.swift */,
@@ -254,6 +259,15 @@
 				66458B1B2D087B8B00B56ECE /* CitySelection.xib */,
 			);
 			path = "City Selection";
+			sourceTree = "<group>";
+		};
+		66458B1E2D097C0B00B56ECE /* Passenger */ = {
+			isa = PBXGroup;
+			children = (
+				66458B1F2D097C2B00B56ECE /* PassengerCell.swift */,
+				66458B202D097C2B00B56ECE /* PassengerCell.xib */,
+			);
+			path = Passenger;
 			sourceTree = "<group>";
 		};
 		66FCBDA82CFF27780080346E = {
@@ -448,6 +462,7 @@
 				66FCBDC12CFF277A0080346E /* LaunchScreen.storyboard in Resources */,
 				66458B1D2D087B8B00B56ECE /* CitySelection.xib in Resources */,
 				61BEF6CE2D0323A900F34287 /* FlightHistoryCell.xib in Resources */,
+				66458B222D097C2B00B56ECE /* PassengerCell.xib in Resources */,
 				66FCBDBE2CFF277A0080346E /* Assets.xcassets in Resources */,
 				61BEF6BB2D02DE8900F34287 /* CampaignCell.xib in Resources */,
 				613D444B2D069BA2002572D6 /* AdditionalServiceCell.xib in Resources */,
@@ -483,6 +498,7 @@
 				61BEF6CA2D02F00E00F34287 /* FlightCell.swift in Sources */,
 				61BEF6BC2D02DE8900F34287 /* CampaignCell.swift in Sources */,
 				61BEF6B12D01ECC800F34287 /* HomeModel.swift in Sources */,
+				66458B212D097C2B00B56ECE /* PassengerCell.swift in Sources */,
 				66FCBDB92CFF27780080346E /* ViewController.swift in Sources */,
 				66458B0D2D08266800B56ECE /* DetailVC.swift in Sources */,
 				66FCBDB52CFF27780080346E /* AppDelegate.swift in Sources */,

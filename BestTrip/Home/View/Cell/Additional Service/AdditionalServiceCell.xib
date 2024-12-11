@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,6 +45,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gK-hr-NnT">
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="buttonDetail:" destination="gTV-IL-0wX" eventType="touchUpInside" id="V2d-EA-lnZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -52,10 +60,14 @@
                                     <constraint firstItem="tKt-dg-E2D" firstAttribute="top" secondItem="Hbr-A7-l0f" secondAttribute="top" id="GbA-qn-Vzw"/>
                                     <constraint firstAttribute="trailing" secondItem="tKt-dg-E2D" secondAttribute="trailing" id="ITe-7b-GBu"/>
                                     <constraint firstItem="eMV-wm-L8U" firstAttribute="leading" secondItem="Hbr-A7-l0f" secondAttribute="leading" id="K3b-l1-ppe"/>
+                                    <constraint firstAttribute="bottom" secondItem="4gK-hr-NnT" secondAttribute="bottom" id="V3Z-ih-IYi"/>
                                     <constraint firstItem="tKt-dg-E2D" firstAttribute="leading" secondItem="Hbr-A7-l0f" secondAttribute="leading" id="aUT-qs-Z9j"/>
+                                    <constraint firstAttribute="trailing" secondItem="4gK-hr-NnT" secondAttribute="trailing" id="f14-bi-zet"/>
                                     <constraint firstAttribute="bottom" secondItem="eMV-wm-L8U" secondAttribute="bottom" id="fS8-sU-yZ7"/>
                                     <constraint firstAttribute="trailing" secondItem="eMV-wm-L8U" secondAttribute="trailing" id="ks7-Jn-CT9"/>
                                     <constraint firstItem="eMV-wm-L8U" firstAttribute="top" secondItem="tKt-dg-E2D" secondAttribute="bottom" id="lfB-je-9k9"/>
+                                    <constraint firstItem="4gK-hr-NnT" firstAttribute="top" secondItem="Hbr-A7-l0f" secondAttribute="top" id="rm0-Aa-7oc"/>
+                                    <constraint firstItem="4gK-hr-NnT" firstAttribute="leading" secondItem="Hbr-A7-l0f" secondAttribute="leading" id="yjw-zv-W9X"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -82,6 +94,7 @@
             </constraints>
             <size key="customSize" width="274" height="55"/>
             <connections>
+                <outlet property="buttonDetail" destination="4gK-hr-NnT" id="knh-pu-Mr1"/>
                 <outlet property="imgIcon" destination="FD6-cD-Axo" id="Y6a-CX-5V3"/>
                 <outlet property="lblDetail" destination="eMV-wm-L8U" id="9rQ-L0-TMH"/>
                 <outlet property="lblTitle" destination="tKt-dg-E2D" id="b5Q-mu-Q8a"/>

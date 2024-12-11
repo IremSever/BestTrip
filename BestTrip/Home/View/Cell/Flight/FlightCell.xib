@@ -55,6 +55,9 @@
                                                         <buttonConfiguration key="configuration" style="filled">
                                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonSelectAirport:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rWc-BZ-ojv"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fa-hv-1r0">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
@@ -169,6 +172,9 @@
                                                         <buttonConfiguration key="configuration" style="filled">
                                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonSelectPassenger:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gcC-GO-jxn"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 Adult(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uff-GQ-wmV">
                                                         <rect key="frame" x="0.0" y="-2.333333333333333" width="333" height="17"/>
@@ -213,9 +219,12 @@
                                                         <buttonConfiguration key="configuration" style="filled">
                                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonSelectDate:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ndQ-6v-GCz"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6.12.2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vge-hA-DUQ">
-                                                        <rect key="frame" x="0.0" y="-2.333333333333333" width="120" height="20"/>
+                                                        <rect key="frame" x="-1" y="-2.3333333333333428" width="120" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

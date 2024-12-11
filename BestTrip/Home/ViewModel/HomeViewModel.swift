@@ -8,7 +8,6 @@
 import Foundation
 class HomeViewModel {
     var homeModel: HomeModel?
-    
     func fetchData(completion: @escaping () -> Void) {
         guard let path = Bundle.main.path(forResource: "home", ofType: "json") else {
             print("json not found")

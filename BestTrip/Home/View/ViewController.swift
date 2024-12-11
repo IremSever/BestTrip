@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, FlightCellDelegate, AdditionalServiceCellDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = HomeViewModel()
     
@@ -42,6 +42,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.register(UINib(nibName: "AdditionalServiceCell", bundle: nil), forCellWithReuseIdentifier: "AdditionalServiceCell")
         
     }
+    
+    func flightCellDidRequestShowDetail(_ cell: FlightCell, detailType: DetailType) {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          
+          guard let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC else {
+              return
+          }
+          
+          detailVC.detailType = detailType
+          navigationController?.pushViewController(detailVC, animated: true)
+      }
+    
+    
+    func additionalServiceCellDidRequestShowDetail(_ cell: AdditionalServiceCell, detailType: DetailType) {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          
+          guard let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC else {
+              return
+          }
+          
+          detailVC.detailType = detailType
+          navigationController?.pushViewController(detailVC, animated: true)
+      }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -82,6 +106,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.layer.shadowRadius = 10
             cell.layer.masksToBounds = false
             cell.layer.cornerRadius = 20
+            cell.delegate = self
             cell.configure(with: data)
             return cell
         case .additionalService:
@@ -94,6 +119,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.layer.shadowRadius = 10
             cell.layer.masksToBounds = false
             cell.layer.cornerRadius = 20
+            cell.delegate = self
+
             return cell
         case .bestOppotunity:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
@@ -189,3 +216,4 @@ extension ViewController {
         return section
     }
 }
+

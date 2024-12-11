@@ -4,10 +4,14 @@
 //
 //  Created by İrem Sever on 6.12.2024.
 //
-//fromAirpot ve toAirport, departureDate ve return date tıkladığımda DetailVC ekranı açılsın.
 import UIKit
 
+protocol FlightCellDelegate: AnyObject {
+    func flightCellDidRequestShowDetail(_ cell: FlightCell, detailType: DetailType)
+}
+
 class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+    weak var delegate: FlightCellDelegate?
     @IBOutlet weak var collectionViewHistory: UICollectionView!
     @IBOutlet weak var heightCollectionView: NSLayoutConstraint!
     var viewModel = HomeViewModel()
@@ -27,8 +31,7 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var lblReturnDate: UILabel!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    private var dashedLineLayer: CAShapeLayer?
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,10 +39,6 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         loadData()
         segmentedControl.selectedSegmentIndex = 0
         segmentValueChanged(segmentedControl)
-    }
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setupSegmentedControlStyle()
     }
     
     func configure(with data: HomeData) {
@@ -69,22 +68,35 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         segmentedControl.layer.masksToBounds = true
     }
 }
+
+//buttons
 extension FlightCell {
     @IBAction func buttonChange(_ sender: Any) {
         print("change")
     }
     
     @IBAction func buttonCalendar(_ sender: Any) {
-        print("calendar")
+        delegate?.flightCellDidRequestShowDetail(self, detailType: .dateSelection)
     }
     
     @IBAction func buttonSearch(_ sender: Any) {
         print("search")
     }
     
+    @IBAction func buttonSelectAirport(_ sender: Any) {
+        delegate?.flightCellDidRequestShowDetail(self, detailType: .citySelection)
+    }
     
+    @IBAction func buttonSelectDate(_ sender: Any) {
+        delegate?.flightCellDidRequestShowDetail(self, detailType: .dateSelection)
+    }
+    
+    @IBAction func buttonSelectPassenger(_ sender: Any) {
+        delegate?.flightCellDidRequestShowDetail(self, detailType: .passengerSelection)
+    }
 }
 
+//history collectionview
 extension FlightCell {
     func setupCollectionView() {
         collectionViewHistory.delegate = self
@@ -131,23 +143,5 @@ extension FlightCell {
             break
         }
         
-    }
-}
-
-extension FlightCell {
-    private func setupSegmentedControlStyle() {
-        segmentedControl.layer.cornerRadius = segmentedControl.bounds.height / 2
-        segmentedControl.layer.masksToBounds = true
-        segmentedControl.clipsToBounds = true
-        
-        for i in 0...subviews.count - 1{
-            if let subview = subviews[i] as? UIImageView{
-                if i == segmentedControl.selectedSegmentIndex {
-                    subview.backgroundColor = UIColor(red: 170.0/255.0, green: 170.0/255.0, blue: 170.0/255.0, alpha: 1.0)
-                }else{
-                    subview.backgroundColor = .clear
-                }
-            }
-        }
     }
 }

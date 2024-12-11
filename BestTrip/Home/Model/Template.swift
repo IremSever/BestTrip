@@ -13,3 +13,12 @@ public enum Template: String, Codable{
     case additionalService
     case bestOppotunity
 }
+
+
+//flight cell button type
+enum DetailType {
+    case citySelection
+    case dateSelection
+    case passengerSelection
+    case additionalServiceList
+}
