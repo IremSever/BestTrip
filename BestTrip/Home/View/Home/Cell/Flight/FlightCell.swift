@@ -10,7 +10,9 @@ protocol FlightCellDelegate: AnyObject {
     func flightCellDidRequestShowDetail(_ cell: FlightCell, detailType: DetailType)
 }
 
-class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, ConfigurableCell {
+  
+    
     weak var delegate: FlightCellDelegate?
     @IBOutlet weak var collectionViewHistory: UICollectionView!
     @IBOutlet weak var heightCollectionView: NSLayoutConstraint!

@@ -10,7 +10,8 @@ import UIKit
 protocol AdditionalServiceCellDelegate: AnyObject {
     func additionalServiceCellDidRequestShowDetail(_ cell: AdditionalServiceCell, detailType: DetailType)
 }
-class AdditionalServiceCell: UICollectionViewCell {
+
+class AdditionalServiceCell: UICollectionViewCell, ConfigurableCell {
 
     @IBOutlet weak var viewBg: UIView!
     @IBOutlet weak var lblDetail: UILabel!
@@ -32,18 +33,8 @@ class AdditionalServiceCell: UICollectionViewCell {
         lblDetail.text = data.detail
         
     }
-    
-    func configureDetail(with detailData: DetailData) {
-        viewBg.layer.cornerRadius = 10
-        viewBg.layer.masksToBounds = true
-        imgIcon.image = UIImage(named: detailData.image ?? "")
-        lblTitle.text = detailData.title
-        lblDetail.text = detailData.detail
-    }
-    
+  
     @IBAction func buttonDetail(_ sender: Any) {
         delegate?.additionalServiceCellDidRequestShowDetail(self, detailType: .additionalServiceList)
     }
-    
-    
 }

@@ -70,6 +70,7 @@
             </constraints>
             <size key="customSize" width="339" height="323"/>
             <connections>
+                <outlet property="heightLblPrice" destination="zqk-XQ-850" id="eSt-gE-Vk7"/>
                 <outlet property="imgSlider" destination="d5B-Rg-Cv1" id="AAR-b3-BHe"/>
                 <outlet property="lblFaresFrom" destination="IAE-ke-eBu" id="wCR-nb-oOu"/>
                 <outlet property="lblPrice" destination="fP3-Na-Ubc" id="msk-HN-N6E"/>

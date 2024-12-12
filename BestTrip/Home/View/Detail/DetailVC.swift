@@ -4,6 +4,7 @@
 //
 //  Created by IREM SEVER on 10.12.2024.
 //
+
 import UIKit
 
 class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -25,9 +26,11 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.sectionInset = .zero
-
         collectionView.collectionViewLayout = layout
-
+        registerCell()
+    }
+    
+    func registerCell() {
         switch detailType {
         case .citySelection:
             collectionView.register(UINib(nibName: "CitySelection", bundle: nil), forCellWithReuseIdentifier: "CitySelection")
@@ -36,7 +39,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         case .passengerSelection:
             collectionView.register(UINib(nibName: "PassengerCell", bundle: nil), forCellWithReuseIdentifier: "PassengerCell")
         case .additionalServiceList:
-            collectionView.register(UINib(nibName: "AdditionalServiceCell", bundle: nil), forCellWithReuseIdentifier: "AdditionalServiceCell")
+            collectionView.register(UINib(nibName: "CampaignCell", bundle: nil), forCellWithReuseIdentifier: "CampaignCell")
         default:
             break
         }
@@ -49,12 +52,20 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
         }
     }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        switch detailType {
+        case .citySelection, .dateSelection, .passengerSelection:
+            return 1
+        case .additionalServiceList:
+            if let detailDataList = viewModel.homeModel?.app.first(where: { $0.type == .additionalService })?.data.first?.detailData {
+                return detailDataList.count
+            }
+            return 1
+        default:
+            return 0
+        }
+        
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch detailType {
@@ -68,15 +79,11 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PassengerCell", for: indexPath) as! PassengerCell
             return cell
         case .additionalServiceList:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdditionalServiceCell", for: indexPath) as! AdditionalServiceCell
-            
-            guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item],
-                  let detailDataArray = data.detailData else {
-                return UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
+            if let detailDataList = viewModel.homeModel?.app.first(where: { $0.type == .additionalService })?.data.first?.detailData {
+                let detailItem = detailDataList[indexPath.item]
+                cell.configureDetail(with: detailItem)
             }
-            
-            
-            cell.configure(with: data)
             return cell
         default:
             fatalError("")
@@ -84,10 +91,14 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           let width = collectionView.bounds.width - 20
-           let height: CGFloat = 750
-     
-           return CGSize(width: width, height: height)
-       }
-
+        switch detailType {
+        case .additionalServiceList:
+            let width = collectionView.bounds.width - 20
+            return CGSize(width: width, height: 180)
+        default:
+            let width = collectionView.bounds.width - 20
+            let height: CGFloat = 750
+            return CGSize(width: width, height: height)
+        }
+    }
 }

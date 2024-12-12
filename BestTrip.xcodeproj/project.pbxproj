@@ -130,6 +130,9 @@
 		613D444C2D06E5F3002572D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				66FCBDB82CFF27780080346E /* ViewController.swift */,
+				66FCBDBA2CFF27780080346E /* Main.storyboard */,
+				61BEF6B82D02DE5A00F34287 /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -164,9 +167,6 @@
 			children = (
 				66458B0B2D08265100B56ECE /* Detail */,
 				613D444C2D06E5F3002572D6 /* Home */,
-				66FCBDB82CFF27780080346E /* ViewController.swift */,
-				66FCBDBA2CFF27780080346E /* Main.storyboard */,
-				61BEF6B82D02DE5A00F34287 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -15,10 +15,15 @@ public enum Template: String, Codable{
 }
 
 
-//flight cell button type
+//detail 
 enum DetailType {
     case citySelection
     case dateSelection
     case passengerSelection
     case additionalServiceList
+    case campaignCellDetail
+}
+
+protocol ConfigurableCell {
+    func configure(with data: HomeData)
 }
