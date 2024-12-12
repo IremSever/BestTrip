@@ -22,6 +22,13 @@
                             <constraint firstAttribute="height" constant="400" id="SGW-jv-NMc"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zln-ei-v5g">
+                        <rect key="frame" x="0.0" y="270" width="393" height="130"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="T1d-Mc-6ap"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llv-Ip-cka">
                         <rect key="frame" x="20" y="356" width="353" height="24"/>
                         <constraints>
@@ -58,15 +65,18 @@
                 <constraint firstItem="Llv-Ip-cka" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="6LR-ob-4hM"/>
                 <constraint firstItem="d5B-Rg-Cv1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BGh-a0-hZj"/>
                 <constraint firstItem="fP3-Na-Ubc" firstAttribute="top" secondItem="Llv-Ip-cka" secondAttribute="bottom" constant="-88" id="F64-g7-Cck"/>
+                <constraint firstAttribute="trailing" secondItem="zln-ei-v5g" secondAttribute="trailing" id="GiR-sS-fHh"/>
                 <constraint firstAttribute="trailing" secondItem="d5B-Rg-Cv1" secondAttribute="trailing" id="Pj6-EU-W77"/>
                 <constraint firstItem="d5B-Rg-Cv1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Q8M-3j-gSd"/>
                 <constraint firstAttribute="trailing" secondItem="fP3-Na-Ubc" secondAttribute="trailing" constant="20" id="VoS-SG-wOE"/>
                 <constraint firstItem="IAE-ke-eBu" firstAttribute="leading" secondItem="Llv-Ip-cka" secondAttribute="leading" id="cEE-AH-1po"/>
                 <constraint firstAttribute="bottom" secondItem="d5B-Rg-Cv1" secondAttribute="bottom" id="lpj-4S-RfJ"/>
                 <constraint firstItem="IAE-ke-eBu" firstAttribute="trailing" secondItem="Llv-Ip-cka" secondAttribute="trailing" id="mjS-ph-EC2"/>
+                <constraint firstItem="zln-ei-v5g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oni-Oz-6px"/>
                 <constraint firstItem="fP3-Na-Ubc" firstAttribute="top" secondItem="Llv-Ip-cka" secondAttribute="bottom" constant="-88" id="p4h-jU-hIS"/>
                 <constraint firstItem="fP3-Na-Ubc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="pWH-Rd-g1t"/>
                 <constraint firstAttribute="bottom" secondItem="fP3-Na-Ubc" secondAttribute="bottom" constant="65" id="zqk-XQ-850"/>
+                <constraint firstAttribute="bottom" secondItem="zln-ei-v5g" secondAttribute="bottom" id="zt1-Mq-e90"/>
             </constraints>
             <size key="customSize" width="339" height="323"/>
             <connections>
@@ -75,6 +85,7 @@
                 <outlet property="lblFaresFrom" destination="IAE-ke-eBu" id="wCR-nb-oOu"/>
                 <outlet property="lblPrice" destination="fP3-Na-Ubc" id="msk-HN-N6E"/>
                 <outlet property="lblTitle" destination="Llv-Ip-cka" id="eAq-iJ-DuC"/>
+                <outlet property="viewGradient" destination="zln-ei-v5g" id="khM-wI-Nvr"/>
             </connections>
             <point key="canvasLocation" x="257.25190839694653" y="84.507042253521135"/>
         </collectionViewCell>

@@ -11,8 +11,6 @@ protocol FlightCellDelegate: AnyObject {
 }
 
 class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, ConfigurableCell {
-  
-    
     weak var delegate: FlightCellDelegate?
     @IBOutlet weak var collectionViewHistory: UICollectionView!
     @IBOutlet weak var heightCollectionView: NSLayoutConstraint!
@@ -98,7 +96,24 @@ extension FlightCell {
     }
 }
 
-//history collectionview
+//segmented contorller
+extension FlightCell {
+    @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            lblTitleDepartureDate.text = "Return Date"
+            lblReturnDate.text = "12.12.24"
+        case 1:
+            lblTitleDepartureDate.text = ""
+            lblReturnDate.text = "One-way"
+        default:
+            break
+        }
+        
+    }
+}
+
+//history collection view
 extension FlightCell {
     func setupCollectionView() {
         collectionViewHistory.delegate = self
@@ -120,30 +135,11 @@ extension FlightCell {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.homeModel?.app.flatMap({ $0.data }).count ?? 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlightHistoryCell", for: indexPath) as! FlightHistoryCell
-        
-        if let flightData = viewModel.homeModel?.app.flatMap({ $0.data })[indexPath.row] {
-            cell.configure(with: flightData)
-        }
-        
         return cell
-    }
-    
-    @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            lblTitleDepartureDate.text = "Return Date"
-            lblReturnDate.text = "12.12.24"
-        case 1:
-            lblTitleDepartureDate.text = ""
-            lblReturnDate.text = "One-way"
-        default:
-            break
-        }
-        
     }
 }

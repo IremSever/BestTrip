@@ -8,7 +8,6 @@
 import Foundation
 class HomeViewModel {
     var homeModel: HomeModel?
-    var homeData: HomeData?
     func fetchData(completion: @escaping () -> Void) {
         guard let path = Bundle.main.path(forResource: "home", ofType: "json") else {
             print("json not found")
@@ -22,7 +21,7 @@ class HomeViewModel {
             
             DispatchQueue.main.async {
                 self.homeModel = decodeData
-//                print("json decode")
+                //print("json decode")
                 completion()
             }
         } catch {
@@ -30,3 +29,4 @@ class HomeViewModel {
         }
     }
 }
+
