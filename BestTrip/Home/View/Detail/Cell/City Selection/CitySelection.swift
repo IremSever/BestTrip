@@ -138,10 +138,11 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
             searchBar.isHidden = true
             collectionViewSearch.reloadData()
             
-            if let fromText = lblFrom.text, !fromText.isEmpty,
-               let toText = lblTo.text, !toText.isEmpty {
-                delegate?.didSelectedCity()
-            }
+            if let fromText = lblFrom.text, fromText != "Make a Selection",
+                      let toText = lblTo.text, toText != "Make a Selection" {
+                       delegate?.didSelectedCity()  
+                   }
+               
         }
     }
 }
