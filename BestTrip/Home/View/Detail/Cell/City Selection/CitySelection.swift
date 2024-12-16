@@ -17,14 +17,19 @@ class CitySelection: UICollectionViewCell {
     @IBOutlet weak var collectionViewSearch: UICollectionView!
     var viewModel = HomeViewModel()
     
+    private var searchBar: UISearchBar!
+    private var isSeaching = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
         loadData()
+        setupSearchBar()
+        addSearchGesture()
     }
     
     func configure(with data: App) {
-       
+      
     }
     
 }
@@ -83,5 +88,51 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
         let width = collectionView.bounds.width
         let height: CGFloat = 48
         return CGSize(width: width, height: height)
+    }
+}
+
+extension CitySelection: UISearchBarDelegate {
+    private func setupSearchBar() {
+        searchBar = UISearchBar()
+        searchBar.delegate = self
+        searchBar.placeholder = "Make a Selection"
+        searchBar.isHidden = true
+        self.addSubview(searchBar)
+    
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: self.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            searchBar.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+    }
+    
+    private func addSearchGesture() {
+        let searchTapGesture = UITapGestureRecognizer(target: self, action: #selector(showSearchBar))
+        viewSearch.addGestureRecognizer(searchTapGesture)
+        let searchTapGestureTo = UITapGestureRecognizer(target: self, action: #selector(showSearchBar))
+        viewSearchTo.addGestureRecognizer(searchTapGestureTo)
+    }
+    
+    @objc private func showSearchBar() {
+        searchBar.isHidden = false
+        searchBar.becomeFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        lblFrom.text = searchText
+        lblTo.text = searchText
+        isSeaching = !searchText.isEmpty
+        collectionViewSearch.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSeaching = false
+        searchBar.text = ""
+        lblFrom.text = ""
+        lblTo.text = ""
+        searchBar.resignFirstResponder()
+        searchBar.isHidden = true
+        collectionViewSearch.reloadData()
     }
 }
