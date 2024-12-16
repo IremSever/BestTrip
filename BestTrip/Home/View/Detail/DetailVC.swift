@@ -7,7 +7,8 @@
 
 import UIKit
 
-class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PassengerCellDelegate {
+class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PassengerCellDelegate , CityCellDelegate {
+   
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = HomeViewModel()
     var detailType: DetailType!
@@ -72,9 +73,11 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         switch detailType {
         case .citySelection:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitySelection", for: indexPath) as! CitySelection
+            cell.delegate = self
             return cell
         case .dateSelection: 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateSelectionCell", for: indexPath) as! DateSelectionCell
+            
             return cell
         case .passengerSelection:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PassengerCell", for: indexPath) as! PassengerCell
@@ -117,4 +120,9 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func didConfirmPassenger() {
         navigationController?.popViewController(animated: true)
     }
+    
+    func didSelectedCity() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

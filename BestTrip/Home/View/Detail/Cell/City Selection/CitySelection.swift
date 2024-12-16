@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CityCellDelegate: Any {
+    func didSelectedCity()
+}
+
 class CitySelection: UICollectionViewCell {
     
     @IBOutlet weak var lblTitle: UILabel!
@@ -19,6 +23,8 @@ class CitySelection: UICollectionViewCell {
     private var searchBar: UISearchBar!
     private var isSearchingFrom = false
     private var isSearchingTo = false
+    
+    var delegate: CityCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -90,6 +96,7 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
             
             if isSearchingFrom || isSearchingTo {
                 data = viewModel.filteredCities[indexPath.item]
+                
             } else {
                 data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] ?? HomeData(title: "", titleImage: nil, detail: nil, image: nil, campaignDate: nil, validOfferDates: nil, validFlightDates: nil, offerEligibility: nil, validOfferRoutes: nil, fees: nil, numberOfSeats: nil, link: nil, flightNumber: nil, departureAirportName: nil, departureAirportCode: nil, arrivalAirportName: nil, arrivalAirportCode: nil, departureCity: nil, arrivalCity: nil, departureTime: nil, arrivalTime: nil, date: nil, price: nil, isDirect: nil, detailData: nil, city: "", country: "", airport: "")
             }
@@ -130,6 +137,11 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
             searchBar.resignFirstResponder()
             searchBar.isHidden = true
             collectionViewSearch.reloadData()
+            
+            if let fromText = lblFrom.text, !fromText.isEmpty,
+               let toText = lblTo.text, !toText.isEmpty {
+                delegate?.didSelectedCity()
+            }
         }
     }
 }
@@ -173,15 +185,25 @@ extension CitySelection: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        if isSearchingFrom {
+            lblFrom.text = searchText
+        } else if isSearchingTo {
+            lblTo.text = searchText
+        }
+
+        searchBar.placeholder = searchText.isEmpty ? "Make a Selection" : nil
+
         if isSearchingFrom || isSearchingTo {
             viewModel.filteredCities = viewModel.homeModel?.app.flatMap { $0.data }.filter {
                 $0.city?.lowercased().contains(searchText.lowercased()) ?? false
             } ?? []
+        } else {
+            viewModel.filteredCities = []
         }
-        
+
         collectionViewSearch.reloadData()
     }
+
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearchingFrom = false
