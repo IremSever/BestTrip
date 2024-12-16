@@ -9,6 +9,7 @@ import UIKit
 
 class CitySelection: UICollectionViewCell {
     
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var viewSearchTo: UIView!
     @IBOutlet weak var lblTo: UILabel!
     @IBOutlet weak var viewSearch: UIView!
@@ -22,6 +23,9 @@ class CitySelection: UICollectionViewCell {
         loadData()
     }
     
+    func configure(with data: App) {
+       
+    }
     
 }
 
@@ -45,22 +49,34 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
         }
     }
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return viewModel.homeModel?.app.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let sectionType = viewModel.homeModel?.app[section].type
         
-        return viewModel.homeModel?.app[section].data.count ?? 0
+        if sectionType == .city {
+            return viewModel.homeModel?.app[section].data.count ?? 0
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else {
+        guard let sectionType = viewModel.homeModel?.app[indexPath.section].type,
+              let data = viewModel.homeModel?.app[indexPath.section].data[indexPath.item] else {
             fatalError("Section type or data not found")
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitiesCell", for: indexPath) as! CitiesCell
-        cell.configure(with: data)
-        return cell
+        
+        switch sectionType {
+        case .campaign, .flights, .additionalService, .bestOppotunity:
+            return UICollectionViewCell()
+        case .city:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitiesCell", for: indexPath) as! CitiesCell
+            cell.configure(with: data)
+            return cell
+          }
+        
     }
 }

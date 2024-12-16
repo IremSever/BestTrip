@@ -15,10 +15,6 @@ struct App: Codable {
     let title: String
     let type: Template?
     let data: [HomeData]
-    
-    var shouldDisplay: Bool {
-        return !(title.isEmpty && type == nil)
-    }
 }
 
 struct HomeData: Codable {

@@ -73,7 +73,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         case .citySelection:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitySelection", for: indexPath) as! CitySelection
             return cell
-        case .dateSelection:
+        case .dateSelection: 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateSelectionCell", for: indexPath) as! DateSelectionCell
             return cell
         case .passengerSelection:
