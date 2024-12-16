@@ -79,4 +79,9 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
           }
         
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        let height: CGFloat = 48
+        return CGSize(width: width, height: height)
+    }
 }

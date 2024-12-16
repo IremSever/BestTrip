@@ -393,12 +393,12 @@
                     "airport": "CDG_ORY"
                 },
                 {
-                    "city": "Paris",
+                    "city": "Paris-Orly",
                     "country": "France",
                     "airport": "ORY"
                 },
                 {
-                    "city": "Paris",
+                    "city": "Paris-Charles de Gaulle",
                     "country": "France",
                     "airport": "CDG"
                 },
@@ -408,12 +408,12 @@
                     "airport": "IST_SAW"
                 },
                 {
-                    "city": "Istanbul",
+                    "city": "Istanbul Airport",
                     "country": "Turkey",
                     "airport": "IST"
                 },
                 {
-                    "city": "Istanbul",
+                    "city": "Istanbul Sabiha Gokcen",
                     "country": "Turkey",
                     "airport": "SAW"
                 },
@@ -426,6 +426,26 @@
                     "city": "Amsterdam",
                     "country": "Netherlands",
                     "airport": "AMS"
+                },
+                {
+                    "city": "Bologna",
+                    "country": "Italy",
+                    "airport": "BLQ"
+                },
+                {
+                    "city": "Antalya",
+                    "country": "Turkey",
+                    "airport": "AYT"
+                },
+                {
+                    "city": "Marseille",
+                    "country": "France",
+                    "airport": "MRS"
+                },
+                {
+                    "city": "Nice",
+                    "country": "France",
+                    "airport": "NCE"
                 }
             ]
         }
