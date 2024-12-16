@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PR4-eb-mXd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hIu-WY-oo0">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdW-KJ-dAu">
                                     <size key="itemSize" width="128" height="128"/>
@@ -105,7 +105,7 @@
                         <constraints>
                             <constraint firstItem="hIu-WY-oo0" firstAttribute="top" secondItem="8Ae-4q-NqG" secondAttribute="top" id="DkE-fm-tRc"/>
                             <constraint firstItem="hIu-WY-oo0" firstAttribute="leading" secondItem="UcK-WD-Wpr" secondAttribute="leading" id="aS7-k4-NSw"/>
-                            <constraint firstItem="hIu-WY-oo0" firstAttribute="bottom" secondItem="8Ae-4q-NqG" secondAttribute="bottom" id="gt2-Mv-waT"/>
+                            <constraint firstItem="hIu-WY-oo0" firstAttribute="bottom" secondItem="8Ae-4q-NqG" secondAttribute="bottom" constant="83" id="gt2-Mv-waT"/>
                             <constraint firstItem="hIu-WY-oo0" firstAttribute="trailing" secondItem="UcK-WD-Wpr" secondAttribute="trailing" id="qFn-UW-Qrt"/>
                         </constraints>
                     </view>

@@ -4,13 +4,14 @@
 //
 //  Created by İrem Sever on 6.12.2024.
 //
+
 import UIKit
 
 protocol FlightCellDelegate: AnyObject {
     func flightCellDidRequestShowDetail(_ cell: FlightCell, detailType: DetailType)
 }
 
-class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, ConfigurableCell {
+class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, PassengerCellDelegate, ConfigurableCell {
     weak var delegate: FlightCellDelegate?
     @IBOutlet weak var collectionViewHistory: UICollectionView!
     @IBOutlet weak var heightCollectionView: NSLayoutConstraint!
@@ -32,6 +33,7 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
    
+    @IBOutlet weak var lblPassenger: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,7 +68,29 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         
         segmentedControl.layer.cornerRadius = 20
         segmentedControl.layer.masksToBounds = true
+        
     }
+    
+    
+    func didUpdatePassengerCount(adults: Int, children: Int, infant: Int) {
+        var passengerText = ""
+        
+        if adults > 0 {
+            passengerText += "Adult(s): \(adults) "
+        }
+        if children > 0 {
+            passengerText += "Child(ren): \(children) "
+        }
+        if infant > 0 {
+            passengerText += "Infant(s): \(infant)"
+        }
+        
+        lblPassenger.text = passengerText
+    }
+    func didConfirmPassenger() {
+        print("confirmed")
+    }
+    
 }
 
 //buttons
@@ -143,3 +167,4 @@ extension FlightCell {
         return cell
     }
 }
+

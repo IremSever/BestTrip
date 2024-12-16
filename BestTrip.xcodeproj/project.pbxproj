@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		613D444A2D069BA2002572D6 /* AdditionalServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D44482D069BA2002572D6 /* AdditionalServiceCell.swift */; };
 		613D444B2D069BA2002572D6 /* AdditionalServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613D44492D069BA2002572D6 /* AdditionalServiceCell.xib */; };
+		613D44572D0F76F5002572D6 /* CitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613D44562D0F76F5002572D6 /* CitiesCell.xib */; };
+		613D44582D0F76F5002572D6 /* CitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D44552D0F76F5002572D6 /* CitiesCell.swift */; };
 		61BEF6AC2D019A4700F34287 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BEF6AB2D019A4700F34287 /* home.json */; };
 		61BEF6B12D01ECC800F34287 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B02D01ECC800F34287 /* HomeModel.swift */; };
 		61BEF6B32D01ED1D00F34287 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF6B22D01ED1D00F34287 /* HomeViewModel.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		613D44482D069BA2002572D6 /* AdditionalServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalServiceCell.swift; sourceTree = "<group>"; };
 		613D44492D069BA2002572D6 /* AdditionalServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalServiceCell.xib; sourceTree = "<group>"; };
+		613D44552D0F76F5002572D6 /* CitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCell.swift; sourceTree = "<group>"; };
+		613D44562D0F76F5002572D6 /* CitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesCell.xib; sourceTree = "<group>"; };
 		61BEF6AB2D019A4700F34287 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 		61BEF6B02D01ECC800F34287 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		61BEF6B22D01ED1D00F34287 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +139,15 @@
 				61BEF6B82D02DE5A00F34287 /* Cell */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		613D44542D0F76DB002572D6 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				613D44552D0F76F5002572D6 /* CitiesCell.swift */,
+				613D44562D0F76F5002572D6 /* CitiesCell.xib */,
+			);
+			path = Cities;
 			sourceTree = "<group>";
 		};
 		61BEF6AA2D0199DE00F34287 /* JSON */ = {
@@ -239,8 +252,6 @@
 				66458B1E2D097C0B00B56ECE /* Passenger */,
 				66458B172D086B1D00B56ECE /* City Selection */,
 				66458B162D085E6B00B56ECE /* Date Selection */,
-				66458B122D085E6200B56ECE /* DateSelectionCell.swift */,
-				66458B132D085E6200B56ECE /* DateSelectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -248,6 +259,8 @@
 		66458B162D085E6B00B56ECE /* Date Selection */ = {
 			isa = PBXGroup;
 			children = (
+				66458B122D085E6200B56ECE /* DateSelectionCell.swift */,
+				66458B132D085E6200B56ECE /* DateSelectionCell.xib */,
 			);
 			path = "Date Selection";
 			sourceTree = "<group>";
@@ -255,6 +268,7 @@
 		66458B172D086B1D00B56ECE /* City Selection */ = {
 			isa = PBXGroup;
 			children = (
+				613D44542D0F76DB002572D6 /* Cities */,
 				66458B1A2D087B8B00B56ECE /* CitySelection.swift */,
 				66458B1B2D087B8B00B56ECE /* CitySelection.xib */,
 			);
@@ -463,6 +477,7 @@
 				66458B1D2D087B8B00B56ECE /* CitySelection.xib in Resources */,
 				61BEF6CE2D0323A900F34287 /* FlightHistoryCell.xib in Resources */,
 				66458B222D097C2B00B56ECE /* PassengerCell.xib in Resources */,
+				613D44572D0F76F5002572D6 /* CitiesCell.xib in Resources */,
 				66FCBDBE2CFF277A0080346E /* Assets.xcassets in Resources */,
 				61BEF6BB2D02DE8900F34287 /* CampaignCell.xib in Resources */,
 				613D444B2D069BA2002572D6 /* AdditionalServiceCell.xib in Resources */,
@@ -506,6 +521,7 @@
 				613D444A2D069BA2002572D6 /* AdditionalServiceCell.swift in Sources */,
 				61BEF6B32D01ED1D00F34287 /* HomeViewModel.swift in Sources */,
 				61BEF6CF2D0323A900F34287 /* FlightHistoryCell.swift in Sources */,
+				613D44582D0F76F5002572D6 /* CitiesCell.swift in Sources */,
 				66458B1C2D087B8B00B56ECE /* CitySelection.swift in Sources */,
 				66FCBDB72CFF27780080346E /* SceneDelegate.swift in Sources */,
 				66458B142D085E6200B56ECE /* DateSelectionCell.swift in Sources */,

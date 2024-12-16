@@ -12,6 +12,7 @@ public enum Template: String, Codable{
     case flights
     case additionalService
     case bestOppotunity
+    case city
 }
 
 
@@ -22,6 +23,7 @@ enum DetailType {
     case passengerSelection
     case additionalServiceList
     case campaignCellDetail
+    
 }
 
 protocol ConfigurableCell {

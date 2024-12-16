@@ -31,7 +31,6 @@ class AdditionalServiceCell: UICollectionViewCell, ConfigurableCell {
         imgIcon.image = UIImage(named: data.image ?? "")
         lblTitle.text = data.title
         lblDetail.text = data.detail
-        
     }
   
     @IBAction func buttonDetail(_ sender: Any) {

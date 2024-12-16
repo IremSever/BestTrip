@@ -372,6 +372,62 @@
                 
             ]
             
+        },
+        {
+            "title": "",
+            "type": "city",
+            "data": [
+                {
+                    "city": "Izmir",
+                    "country": "Turkey",
+                    "airport": "ADB"
+                },
+                {
+                    "city": "Ankara",
+                    "country": "Turkey",
+                    "airport": "ESB"
+                },
+                {
+                    "city": "Paris All",
+                    "country": "France",
+                    "airport": "CDG_ORY"
+                },
+                {
+                    "city": "Paris",
+                    "country": "France",
+                    "airport": "ORY"
+                },
+                {
+                    "city": "Paris",
+                    "country": "France",
+                    "airport": "CDG"
+                },
+                {
+                    "city": "Istanbul All",
+                    "country": "Turkey",
+                    "airport": "IST_SAW"
+                },
+                {
+                    "city": "Istanbul",
+                    "country": "Turkey",
+                    "airport": "IST"
+                },
+                {
+                    "city": "Istanbul",
+                    "country": "Turkey",
+                    "airport": "SAW"
+                },
+                {
+                    "city": "Barcelona",
+                    "country": "Spain",
+                    "airport": "BCN"
+                },
+                {
+                    "city": "Amsterdam",
+                    "country": "Netherlands",
+                    "airport": "AMS"
+                }
+            ]
         }
     ]
 }

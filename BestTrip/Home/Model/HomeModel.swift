@@ -15,6 +15,10 @@ struct App: Codable {
     let title: String
     let type: Template?
     let data: [HomeData]
+    
+    var shouldDisplay: Bool {
+        return !(title.isEmpty && type == nil)
+    }
 }
 
 struct HomeData: Codable {
@@ -27,6 +31,7 @@ struct HomeData: Codable {
     let arrivalTime, date, price: String?
     let isDirect: Bool?
     let detailData: [DetailData]?
+    let city, country, airport: String?
 
     enum CodingKeys: String, CodingKey {
         case title
@@ -52,6 +57,7 @@ struct HomeData: Codable {
         case date, price
         case isDirect = "is_direct"
         case detailData
+        case city, country, airport
     }
 }
 

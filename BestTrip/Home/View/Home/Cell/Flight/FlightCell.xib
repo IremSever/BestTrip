@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -386,7 +386,7 @@
                                         <rect key="frame" x="0.0" y="3" width="373" height="1"/>
                                     </imageView>
                                     <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-BQ-JBz">
-                                        <rect key="frame" x="-10" y="-5.3333333333333446" width="20" height="18.666666666666664"/>
+                                        <rect key="frame" x="-10" y="-5.6666666666666767" width="20" height="18.666666666666671"/>
                                         <color key="tintColor" red="0.90196079019999997" green="0.90980386729999996" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="gni-cM-zVW"/>
@@ -408,7 +408,7 @@
                                 </constraints>
                             </view>
                             <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Akc-Un-0ZN">
-                                <rect key="frame" x="362" y="0.99999999999999822" width="20" height="18.666666666666664"/>
+                                <rect key="frame" x="362" y="0.66666666666666607" width="20" height="18.666666666666671"/>
                                 <color key="tintColor" red="0.90196079019999997" green="0.90980386729999996" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.999999999999986" id="HRy-Jd-ivf"/>
@@ -456,6 +456,7 @@
                 <outlet property="lblCityTo" destination="4IB-aj-zUw" id="hjc-Ik-Vnc"/>
                 <outlet property="lblDepartureDate" destination="Vge-hA-DUQ" id="ZyV-pl-aaa"/>
                 <outlet property="lblFromAirport" destination="8fa-hv-1r0" id="8zI-ur-woR"/>
+                <outlet property="lblPassenger" destination="uff-GQ-wmV" id="1eA-MP-Q5c"/>
                 <outlet property="lblReturnDate" destination="2DU-yS-opu" id="KuL-hJ-ghw"/>
                 <outlet property="lblTitleDepartureDate" destination="JdJ-Ni-GpA" id="Ugy-ft-DsQ"/>
                 <outlet property="lblToAirport" destination="bei-JP-fDQ" id="pnn-2s-aTg"/>
@@ -477,13 +478,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

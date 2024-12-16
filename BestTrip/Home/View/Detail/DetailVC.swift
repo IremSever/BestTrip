@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PassengerCellDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = HomeViewModel()
     var detailType: DetailType!
@@ -16,6 +16,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         super.viewDidLoad()
         setupCollectionView()
         loadData()
+        
     }
     
     func setupCollectionView() {
@@ -77,6 +78,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             return cell
         case .passengerSelection:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PassengerCell", for: indexPath) as! PassengerCell
+            cell.delegate = self
             return cell
         case .additionalServiceList:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
@@ -95,10 +97,24 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         case .additionalServiceList:
             let width = collectionView.bounds.width - 20
             return CGSize(width: width, height: 180)
-        default:
+        case .passengerSelection:
             let width = collectionView.bounds.width - 20
-            let height: CGFloat = 750
+            return CGSize(width: width, height: 700)
+        default:
+            let width = collectionView.bounds.width 
+            let height: CGFloat = 720
             return CGSize(width: width, height: height)
         }
+    }
+    
+    
+    
+    func didUpdatePassengerCount(adults: Int, children: Int, infant: Int) {
+        print("Updated counts: Adults - \(adults), Children - \(children), Infants - \(infant)")
+        
+    }
+    
+    func didConfirmPassenger() {
+        navigationController?.popViewController(animated: true)
     }
 }

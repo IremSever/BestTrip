@@ -77,7 +77,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let sectionType = viewModel.homeModel?.app[section].type
         
-        if sectionType == .flights {
+        if sectionType == .city {
+            return 0
+        } else if sectionType == .flights {
             return 1
         } else {
             return viewModel.homeModel?.app[section].data.count ?? 0
@@ -105,7 +107,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell = serviceCell
         case .bestOppotunity:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
-        }
+        case .city:
+              return UICollectionViewCell()
+          }
         
         configureCellAppearance(cell, for: sectionType)
         if let configurableCell = cell as? ConfigurableCell {
@@ -161,6 +165,8 @@ extension ViewController {
                     headerHeight: 50,
                     contentInsets: NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16)
                 )
+            case .city:
+                return nil
             case .none:
                 return nil
             }

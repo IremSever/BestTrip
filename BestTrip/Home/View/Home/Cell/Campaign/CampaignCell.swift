@@ -29,7 +29,6 @@ class CampaignCell: UICollectionViewCell, ConfigurableCell {
             imgSlider.layer.cornerRadius = 10
             imgSlider.layer.masksToBounds = true
         }
-
     }
 
     func configureDetail(with detailData: DetailData) {
