@@ -11,7 +11,8 @@ protocol FlightCellDelegate: AnyObject {
     func flightCellDidRequestShowDetail(_ cell: FlightCell, detailType: DetailType)
 }
 
-class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, PassengerCellDelegate, ConfigurableCell {
+class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UpdateCityCellDelegate, PassengerCellDelegate, ConfigurableCell {
+   
     weak var delegate: FlightCellDelegate?
     @IBOutlet weak var collectionViewHistory: UICollectionView!
     @IBOutlet weak var heightCollectionView: NSLayoutConstraint!
@@ -41,6 +42,7 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         loadData()
         segmentedControl.selectedSegmentIndex = 0
         segmentValueChanged(segmentedControl)
+        
     }
     
     func configure(with data: HomeData) {
@@ -60,12 +62,10 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
         infoMask.path = infoPath.cgPath
         viewBgInfo.layer.mask = infoMask
         
-        lblCityFrom.text = data.departureCity
         lblFromAirport.text = data.departureAirportCode
         
-        lblCityTo.text = data.arrivalCity
         lblToAirport.text = data.arrivalAirportCode
-        
+        didUpdateCity(from: lblCityFrom.text ?? "", to: lblCityTo.text ?? "")
         segmentedControl.layer.cornerRadius = 20
         segmentedControl.layer.masksToBounds = true
         
@@ -89,6 +89,11 @@ class FlightCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionVi
     }
     func didConfirmPassenger() {
         print("confirmed")
+    }
+    
+    func didUpdateCity(from: String, to: String) {
+        lblCityFrom.text = from
+        lblCityTo.text = to
     }
     
 }

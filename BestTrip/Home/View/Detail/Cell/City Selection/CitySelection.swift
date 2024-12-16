@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UpdateCityCellDelegate: Any {
+    func didUpdateCity(from: String, to: String)
+}
+
 protocol CityCellDelegate: Any {
     func didSelectedCity()
 }
@@ -25,7 +29,7 @@ class CitySelection: UICollectionViewCell {
     private var isSearchingTo = false
     
     var delegate: CityCellDelegate?
-    
+    var update: UpdateCityCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
@@ -139,10 +143,11 @@ extension CitySelection: UICollectionViewDelegate, UICollectionViewDataSource {
             collectionViewSearch.reloadData()
             
             if let fromText = lblFrom.text, fromText != "Make a Selection",
-                      let toText = lblTo.text, toText != "Make a Selection" {
-                       delegate?.didSelectedCity()  
-                   }
-               
+               let toText = lblTo.text, toText != "Make a Selection" {
+                update?.didUpdateCity(from: lblFrom.text ?? "", to: lblTo.text ?? "")
+                delegate?.didSelectedCity()
+            }
+            
         }
     }
 }
