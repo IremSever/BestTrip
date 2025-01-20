@@ -1,4 +1,4 @@
-# Best Trip: Your Ultimate Travel Companion
+# Best Trip - Pegasus: Your Ultimate Travel Companion
 Best Trip is your one-stop travel app for booking flights, managing reservations, and discovering the best travel deals. Designed to replicate the intuitive experience of Pegasus Airlines' mobile app, Best Trip makes planning and managing your journeys effortless and enjoyable.
 
 Developed using modern technologies and an architecture that ensures performance and scalability, Best Trip delivers a smooth and seamless user experience for travelers on the go.
